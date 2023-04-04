@@ -8,6 +8,16 @@ import {
 } from 'firebase/auth'
 
 
+
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc
+
+} from 'firebase/firestore'
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyB7FDPQLVT7lyVdrBa_611M_AjR0YOCLF4",
     authDomain: "crwn-clothing-app-94065.firebaseapp.com",
@@ -31,4 +41,9 @@ const firebaseConfig = {
 
   export const auth = getAuth();
   export const signInWithGooglePopup = () => signInWithPopup(auth,provider);
+  export const db = getFirestore();
+
+  export const createUserDocfromAuth = async ()=>{
+    const userDocref = doc(db,'users',)
+  }
 
