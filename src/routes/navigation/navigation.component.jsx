@@ -6,6 +6,8 @@ import { ReactComponent as CrwnLogo } from '../../Assets/crown.svg';
 import './navigation.styles.scss';
 import { UserContext } from '../../context/user.context';
 
+
+
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 
 const Navigation = () => {
